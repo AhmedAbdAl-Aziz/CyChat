@@ -1,0 +1,40 @@
+APKTool
+
+1. Overview
+Use Cases:
+- Decompile Smali code
+- تحليل resources & manifest
+- إعادة ترجمة APK
+- Reverse engineering للـ Android apps
+
+---
+
+2. Key Features
+- Decode XML resources
+- Decompile/compile Smali
+- Framework handling
+- Full rebuild support
+
+----
+
+3. Installation
+
+ Linux
+sudo apt install apktool
+
+---
+
+4. Common Commands
+apktool d app.apk
+apktool b app_folder
+Resource files:
+apktool d --only-main-classes app.apk
+
+---
+
+5. Important Parameters
+Parameter	Description
+d	Decompile APK
+b	Build APK
+--no-src	Ignore smali code
+--only-main-classes	Faster decode
