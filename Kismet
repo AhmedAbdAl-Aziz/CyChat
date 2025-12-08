@@ -1,0 +1,51 @@
+Kismet
+
+1. Overview
+Kismet is an open-source wireless network detector, sniffer, and intrusion detection system that works with WiFi, Bluetooth, and SDR devices. It detects wireless networks, clients, and offers passive reconnaissance without associating with networks.
+
+Use cases:
+- Wireless network discovery  
+- Passive sniffing / monitoring  
+- Mapping WiFi & Bluetooth devices  
+- Useful for wireless auditing and reconnaissance  
+
+---
+
+2. Key Features
+- Passive detection of networks/devices  
+- Supports many wireless cards & SDR  
+- Logging to multiple formats (PCAP, Kismet logs)  
+- Supports GPS tracking & mapping  
+- Detection of hidden SSIDs  
+- Alerts for suspicious activities  
+
+---
+
+3. Installation
+
+Debian/Ubuntu/Kali
+sudo apt update
+sudo apt install kismet
+
+Build from source (if needed)
+git clone https://www.kismetwireless.net/git/kismet.git
+cd kismet
+./configure
+make
+sudo make install
+
+----
+
+4. Basic Usage
+sudo kismet
+Scan passively — list networks & clients
+Use UI via web interface or terminal
+
+----
+
+5. Important Configuration / Options
+
+Enable monitor mode for wireless adapter
+Choose correct wireless interface
+Logging destination and format
+Alert thresholds for intrusion detection
