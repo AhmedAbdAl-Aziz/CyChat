@@ -1,0 +1,59 @@
+theHarvester
+
+1. Overview
+theHarvester is an OSINT email, domain, and subdomain enumeration tool used in the early reconnaissance phase.
+
+Useful for:
+- Bug Bounty recon  
+- Gathering emails for password spraying tests  
+- Finding virtual hosts and subdomains  
+
+2. Key Features
+- Enumeration via search engines (Google, Bing, DuckDuckGo)  
+- Passive DNS lookup  
+- Subdomain discovery  
+- Email harvesting  
+- Shodan & Censys integration  
+
+---
+
+3. Installation
+### Linux
+sudo apt install theharvester
+
+
+or from GitHub:
+git clone https://github.com/laramies/theHarvester
+cd theHarvester
+pip install -r requirements.txt
+
+macOS
+brew install theharvester
+
+Windows
+Install via Python:
+pip install theHarvester
+
+4. Common Commands
+theharvester -d example.com -b google
+theharvester -d example.com -b bing -l 500
+theharvester -d example.com -b shodan
+
+5. Important Parameters
+Flag	Description
+-d	Domain
+-b	Data source (google, bing, duckduckgo, shodan…)
+-l	Number of results
+-f	Output to HTML/XML
+-s	Start result number
+-v	Verbose mode
+-h	Help
+
+6. Advanced Usage
+Export to HTML
+theharvester -d example.com -b google -f report
+API-Powered Scan (Shodan)
+
+export SHODAN_API_KEY="xyz"
+theharvester -d example.com -b shodan
+
