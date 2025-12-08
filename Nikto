@@ -1,0 +1,69 @@
+ Nikto
+
+1. Overview
+Nikto is an open-source web server scanner that checks for dangerous files, outdated server versions, misconfigurations, and common vulnerabilities.
+
+Used for:
+- Bug Bounty web recon  
+- Detecting exposed admin panels  
+- Finding outdated server software  
+- Quick vulnerability checks on websites  
+
+---
+2. Key Features
+- 6000+ checks for dangerous files  
+- Detect outdated web servers  
+- SSL/TLS scanning  
+- Check for common misconfigurations  
+- Identify security headers  
+
+---
+
+3. Installation
+
+Kali / Ubuntu
+sudo apt install nikto
+From GitHub
+git clone https://github.com/sullo/nikto
+cd nikto
+
+Docker
+docker run sullo/nikto -h example.com
+
+---
+
+4. Common Commands
+nikto -h http://example.com
+nikto -h https://example.com -p 443
+nikto -h http://example.com -Tuning x
+
+---
+
+5. Important Parameters
+Flag	Description
+-h	Target host
+-p	Port
+-ssl	Force SSL
+-Tuning	Scan type selection
+-output	Save results to a file
+-Plugins	Enable specific plugins
+-useragent	Custom User-Agent
+-timeout	Timeout per request
+
+---
+
+6. Advanced Usage
+Tuned Scan
+nikto -h example.com -Tuning 123b
+
+Scanning categories:
+1 → Interesting file checks
+2 → Misconfiguration checks
+3 → Information leak checks
+b → SSL tests
+
+Save to File
+nikto -h example.com -output report.html
+
+Proxy Support
+nikto -h example.com -useproxy http://127.0.0.1:8080
