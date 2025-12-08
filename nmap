@@ -1,7 +1,7 @@
 
-# Nmap (Network Mapper)
+Nmap (Network Mapper)
 
-## 1. Overview
+1. Overview
 Nmap is a powerful open-source network scanning and enumeration tool used to identify hosts, open ports, running services, operating systems, and potential vulnerabilities.
 
 Useful in:
@@ -9,7 +9,9 @@ Useful in:
 - Pentesting (network mapping)  
 - Asset discovery in large environments  
 
-## 2. Key Features
+----
+
+2. Key Features
 - Host discovery  
 - Port scanning (TCP/UDP)  
 - Service version detection  
@@ -19,23 +21,23 @@ Useful in:
 
 ---
 
-## 3. Installation
+3. Installation
 
-### Linux (Debian/Ubuntu)
-```bash
+Linux (Debian/Ubuntu)
 sudo apt install nmap
 
-### Arch Linux
+Arch Linux
 sudo pacman -S nmap
 
-### macOS
+macOS
 brew install nmap
 
-### Windows
+Windows
 https://nmap.org/download.html
 
 ---
-Common Commands ! 
+
+4. Common Commands ! 
 
 nmap <target>
 nmap -sV <target>
@@ -73,29 +75,5 @@ nmap --script http-title <target>
 
 Mass Scan + Output
 nmap -sC -sV -oN result.txt <target>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
