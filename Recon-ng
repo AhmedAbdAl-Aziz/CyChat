@@ -1,6 +1,6 @@
  Recon-NG 
 
-## 1. Overview
+1. Overview
 Recon-NG is a modular web reconnaissance framework similar to Metasploit, designed for automated OSINT collection.
 
 Used in:
@@ -8,7 +8,9 @@ Used in:
 - Collecting emails, subdomains, credentials leaks  
 - Automating passive information gathering  
 
-## 2. Key Features
+---
+
+2. Key Features
 - Over 70 recon modules  
 - API key support  
 - Workspace-based environment  
@@ -17,19 +19,20 @@ Used in:
 
 ---
 
-## 3. Installation
+3. Installation
 
-### Linux / macOS
-git clone https://github.com/lanmaster53/recon-ng.git
-cd recon-ng
-pip install -r REQUIREMENTS
+Linux / macOS
+  git clone https://github.com/lanmaster53/recon-ng.git
+  cd recon-ng
+  pip install -r REQUIREMENTS
 
-### Windows
+Windows
+    Install manually:
+    https://github.com/lanmaster53/recon-ng
 
-Install manually:
-https://github.com/lanmaster53/recon-ng
+---
 
-## Common Commands
+4. Common Commands
 recon-ng
 modules search
 modules load recon/domains-hosts/bing_domain_web
@@ -37,7 +40,7 @@ keys add bing_api
 run
 show results
 
-## Important Modules & Parameters
+5. Important Modules & Parameters
 Module	                                Description
 recon/domains-hosts/bing_domain_web	    Collect hosts via Bing
 recon/contacts-credentials/hibp_breach	Find breached emails
@@ -45,7 +48,9 @@ recon/domains-hosts/hackertarget	      Subdomain enumeration
 recon/profile/profile	User profiling
 reporting/html	Generate HTML reports
 
-Common Flags:
+---
+
+6. Common Flags:
 
 run – execute module
 
@@ -53,7 +58,9 @@ info – show module info
 
 options set X – configure module
 
-## Advanced Usage
+----
+
+7. Advanced Usage
 Automated Full Recon Pipeline Script
 workspaces create target
 modules load recon/domains-hosts/hackertarget
