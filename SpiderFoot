@@ -1,0 +1,59 @@
+SpiderFoot
+
+1. Overview
+SpiderFoot is an automated OSINT & reconnaissance platform capable of scanning domains, IP ranges, emails, and more using 200+ modules.
+
+Use Cases:
+- Reconnaissance in bug bounty
+- Digital footprint discovery
+- Passive & active scanning
+- Automating OSINT workflows
+
+---
+
+2. Key Features
+- 200+ OSINT modules
+- Web interface + CLI support
+- Export results to JSON/CSV
+- Passive and active recon
+- Integrations with Shodan, VirusTotal, CIRCL, and more
+- Relationship graph visualization
+
+---
+
+3. Installation
+ Linux
+git clone https://github.com/smicallef/spiderfoot.git
+cd spiderfoot
+pip install -r requirements.txt
+python3 sf.py -l 127.0.0.1:5001
+
+Docker
+docker run -p 5001:5001 spiderfoot/spiderfoot
+
+---
+
+4. Usage
+Open the UI:
+http://127.0.0.1:5001
+Create a new scan
+Select modules (DNS, Whois, social footprints, leaks, etc.)
+Start the scan and review results
+
+----
+
+5. Important Modules
+Module	Description
+sfp_dns	DNS enumeration
+sfp_leaks	Email/credential leaks
+sfp_shodan	Shodan integration
+sfp_virustotal	Malware / reputation data
+sfp_social	Social media profiling
+
+---
+
+6. Advanced Use Cases
+Automated domain takeover checks
+Mapping subdomains + analyzing leaked credentials
+Correlating data across modules
+Infrastructure relationship mapping
