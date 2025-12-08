@@ -1,0 +1,82 @@
+# Nessus
+
+1. Overview
+Nessus is one of the most widely used vulnerability scanners.  
+It performs automated scanning to detect vulnerabilities, misconfigurations, outdated services, and security issues across networks, servers, and web applications.
+
+Used in:
+- Pentesting  
+- Vulnerability assessment  
+- Compliance auditing  
+- Enterprise security scanning  
+
+---
+
+2. Key Features
+- High-quality vulnerability detection  
+- Large plugin database (100,000+ checks)  
+- Credentialed & non-credentialed scans  
+- Compliance & configuration auditing  
+- Custom scan templates  
+- Exportable reports (HTML, PDF, CSV)  
+
+---
+
+3. Installation
+
+Linux (Debian/Ubuntu)
+  1. Download package from official website:  
+  https://www.tenable.com/downloads/nessus  
+
+  2. Install:
+sudo dpkg -i Nessus-*.deb
+sudo systemctl start nessusd
+sudo systemctl enable nessusd
+
+RHEL/CentOS
+sudo rpm -ivh Nessus-*.rpm
+systemctl start nessusd
+systemctl enable nessusd
+
+macOS / Windows
+Download installer from:
+https://www.tenable.com/downloads/nessus
+
+---
+
+4. Access the Web Interface
+https://localhost:8834
+
+----
+
+5. Important Parameters & Scan Types
+Scan Type	Description
+Basic Network Scan	Scan for open ports & vulnerabilities
+Advanced Scan	Full customization (plugins, ports, threads)
+Web Application Test	Detect OWASP issues
+Credentialed Scan	Detect deep OS-level vulnerabilities
+Malware Scan	Detect malware indicators
+
+Key Configuration Options:
+Port Range: default, all, or custom
+Safe Checks: enable/disable
+Max Simultaneous Checks
+Plugin Selection: family-level or individual
+
+----
+
+6. Advanced Usage
+API Usage
+curl -k -X GET -H "X-Cookie: token=<token>" https://localhost:8834/scans
+
+Export Scan Results
+
+You can export results in:
+
+HTML
+
+PDF
+
+CSV
+
+Nessus (.nessus) format
