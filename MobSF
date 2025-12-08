@@ -1,0 +1,51 @@
+MobSF (Mobile Security Framework)
+
+1. Overview
+MobSF Android و iOS و Windows، **Static Analysis, Dynamic Analysis, Malware Analysis
+
+Use Cases:
+-APK/IPA 
+-Test mobile apps
+-Permissions, APIs, Components.
+
+---
+
+2. Key Features
+- Static Analysis** (permissions, manifest, APIs)
+- Dynamic Analysis
+- API Monitoring + Traffic Interception**
+- Malware Detection**
+- Code decompilation**
+- Android، iOS، Windows
+
+---
+
+3. Installation
+Linux (Kali / Ubuntu)
+git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git
+cd Mobile-Security-Framework-MobSF
+./setup.sh
+
+Windows
+ Python + MobSF
+run.bat
+macOS
+brew install --cask mobsf
+
+---
+
+4. Usage
+http://127.0.0.1:8000/
+
+ APK / IPA
+
+ Static OR Dynamic Analysis
+
+---
+
+5. Important Options
+Option	Description
+Static Analysis	Permissions, APK Structure, hardcoded keys
+Dynamic Analysis	Runtime behavior, network traffic
+Malware Scan	Signature-based detection
+Code Viewer	Smali, Java, decompiled code
