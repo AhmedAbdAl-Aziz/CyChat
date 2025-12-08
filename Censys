@@ -1,0 +1,53 @@
+Censys
+
+1. Overview
+Censys is a powerful search engine for discovering internet-facing infrastructure. It scans the entire IPv4 space and provides structured data about certificates, hosts, and services.
+
+Use Cases:
+- Attack surface management
+- Exposure analysis
+- Vulnerability tracking
+- Certificate transparency research
+
+---
+
+2. Key Features
+- Internet-wide scanning
+- Real-time snapshots of services
+- Certificate search engine
+- API for automation
+- Query language similar to SQL
+
+---
+
+3. Installation (CLI)
+pip install censys
+censys config
+
+---
+4. Usage Examples
+Search for HTTP servers
+censys search "services.service_name: HTTP"
+
+Inspect an IP
+censys host 8.8.8.8
+
+Search for CVEs
+censys search "services.vulnerabilities.cve: CVE-2023-*"
+
+---
+
+5. Important Features
+Feature	Description
+Hosts Search	Internet-exposed systems
+Certificates	Certificate Transparency logs
+AS/Org lookup	Find exposed assets by company
+Attack Surface Management	Enterprise security monitoring
+
+---
+
+6. Advanced Use Cases
+Finding exposed cloud assets
+Detecting expired or weak SSL certificates
+Identifying Shadow IT
+Tracking vulnerable services across the internet
