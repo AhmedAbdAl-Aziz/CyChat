@@ -1,0 +1,60 @@
+Shodan
+
+1. Overview
+Shodan is the world’s first search engine for Internet-connected devices. It indexes services, ports, banners, and vulnerabilities exposed on the open internet.
+
+Use Cases:
+- Asset discovery
+- Vulnerability assessment
+- IoT security investigation
+- Attack surface mapping
+- Industrial Control Systems (ICS) monitoring
+
+---
+
+2. Key Features
+- Search by IP, hostname, port, protocol, CVE, organization, geolocation
+- Filters for exposed services (RDP, FTP, Elasticsearch, MongoDB, etc.)
+- Real-time monitoring & alerts
+- Shodan CLI for automation
+- API for integration
+
+---
+
+3. Installation
+
+Install CLI
+pip install shodan
+shodan init YOUR_API_KEY
+
+---
+
+4. Usage Examples
+Basic Search
+shodan search apache
+Search Filtering
+shodan search "port:22 country:EG"
+
+Get host information
+shodan host 8.8.8.8
+
+---
+
+5. Important Filters
+Filter	Description
+port:	Filter by port number
+country:	Filter by country
+org:	Organization / ISP
+after:	Results after a date
+product:	Web server, database, service
+vuln:	Devices affected by CVEs
+
+---
+
+6. Advanced Use Cases
+Finding exposed databases (MongoDB, Redis, Elasticsearch)
+Detecting RDP or VNC systems without authentication
+Identifying IoT vulnerabilities
+Mapping cloud attack surface for organizations
+
+Tracking botnets & malicious infrastructure
