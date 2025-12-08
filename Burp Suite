@@ -1,0 +1,59 @@
+Burp Suite 
+
+1. Overview
+What Burp Suite is
+Community vs Professional
+Use cases in pentesting & bug bounty
+Workflow (Proxy → Spider → Scanner → Intruder → Repeater → Extender)
+
+---
+
+2. Installation
+
+Windows (Installer)
+
+Linux (.sh file)
+
+Parrot/Kali (sudo apt install burpsuite)
+
+macOS (DMG)
+
+----
+
+3. Key Features
+Proxy
+Repeater
+Intruder
+Decoder
+Comparer
+Collaborator
+
+---
+
+4. Important Parameters / Usage Examples
+How to set proxy in browser
+Common Intruder payload positions
+Repeater workflow examples
+Useful add-ons via BApp Store
+
+---
+
+5. Real Attack Examples
+IDOR testing
+Authentication bypass
+Rate limit testing
+Hidden endpoints discovery
+
+---
+
+6. Common Mistakes
+Forgetting TLS interception certificate
+Not enabling invisible proxy
+Ignoring scope settings
+
+---
+
+7. Notes for Beginners
+Recommended browser setup
+How to manage repeated requests
+Tips for organizing workflows
