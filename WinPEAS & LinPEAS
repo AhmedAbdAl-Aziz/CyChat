@@ -1,0 +1,80 @@
+ WinPEAS & LinPEAS
+
+1. Overview
+PEAS (Privilege Escalation Awesome Scripts) is a set of post-exploitation enumeration tools used to discover privilege escalation vectors.
+
+- LinPEAS: For Linux privilege escalation  
+- WinPEAS: For Windows privilege escalation  
+
+Used in:
+- Pentesting  
+- Red teaming  
+- CTFs  
+- Internal audits  
+
+---
+
+2. Key Features
+WinPEAS
+- Detect weak Windows services  
+- Find credentials in memory  
+- Check for vulnerable software  
+- Identify misconfigured permissions  
+- Search for stored passwords  
+
+LinPEAS
+- Detect kernel exploits  
+- Check SUID binaries  
+- Identify writable files  
+- Detect exposed credentials  
+- Find cron jobs, capabilities, PATH issues  
+
+---
+
+3. Installation
+
+Linux — LinPEAS
+  curl -L https://github.com/peass-ng/PEASS-ng/releases/download/20241231/linpeas.sh -o linpeas.sh
+  chmod +x linpeas.sh
+  ./linpeas.sh
+
+Windows — WinPEAS
+
+Download:
+https://github.com/peass-ng/PEASS-ng/releases
+
+Run:
+
+winpeas.exe
+
+---
+
+4. Useful Commands
+LinPEAS
+./linpeas.sh
+./linpeas.sh -a    # Aggressive mode
+
+WinPEAS
+winpeas.exe
+winpeas.exe quiet
+
+---
+
+5. What LinPEAS Detects
+  Kernel vulnerabilities
+  World-writable files
+  SUID/SGID abuse
+  PATH hijacking
+  Docker breakout vectors
+  Credential leaks
+  SSH key exposure
+
+---
+
+6. What WinPEAS Detects
+Unquoted service paths
+Weak service permissions
+Credential Manager secrets
+Registry credentials
+Scheduled tasks
+Writable startup folders
