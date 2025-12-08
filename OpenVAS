@@ -1,0 +1,63 @@
+
+OpenVAS (Greenbone Vulnerability Manager)
+
+1. Overview
+OpenVAS is a free, open-source vulnerability scanner used for network and web application scanning.  
+It is the main component of the Greenbone Vulnerability Management (GVM) framework.
+
+Used in:
+- Network security assessments  
+- Vulnerability scanning  
+- Compliance checking  
+- Open-source alternative to Nessus  
+
+---
+
+2. Key Features
+- Fully open-source  
+- Large vulnerability feed  
+- Web UI (GSA) + CLI tools  
+- Scheduled scans  
+- Custom scan configurations  
+- Credentialed scans  
+
+---
+
+3. Installation
+Kali Linux (pre-installed)
+sudo gvm-setup
+sudo gvm-check-setup
+sudo gvm-start
+Debian/Ubuntu
+sudo apt install gvm
+sudo gvm-setup
+
+Access the Web UI
+https://127.0.0.1:9392
+
+---
+
+4. Important Components
+Component	Description
+gvmd	Manager daemon
+openvas-scanner	Scanner engine
+gsad	Web UI
+GVM Feed	Vulnerability updates
+
+---
+
+5. Important Parameters / Scan Settings
+Setting	Description
+Port list	Full scan / TCP only / custom
+Alive test	ARP / ICMP / TCP SYN
+Scan Config	Full & Fast / Full & Deep
+Overrides	Manage false positives
+
+----
+
+6. Advanced Usage
+CLI Scan Example
+omp -u admin -w password -T           
+
+Update Feeds
+sudo greenbone-feed-sync
