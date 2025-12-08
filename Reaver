@@ -1,0 +1,54 @@
+Reaver
+
+1. Overview
+Reaver is a tool that performs brute-force attacks against WiFi Protected Setup (WPS) PINs, aiming to recover WPA/WPA2 passphrases.  
+
+Use cases:
+- Testing WPS-enabled routers (with authorization)  
+- Auditing wireless network security  
+- Educational use to understand WPS vulnerabilities  
+
+---
+
+2. Key Features
+- Automatic WPS PIN brute forcing  
+- WPA/WPA2-PSK recovery  
+- Works over monitor mode + packet capture tools  
+- Option to delay retries (bypass lockouts)  
+- Verbose output & status updates  
+
+---
+
+3. Installation
+
+Debian/Ubuntu/Kali
+
+sudo apt update
+sudo apt install reaver
+
+Arch Linux
+sudo pacman -S reaver
+
+macOS / Source build (requires wireless driver support)
+
+---
+
+4. Common Commands & Usage
+reaver -i wlan0mon -b <BSSID> -c <channel> -a -vv
+-i : interface (monitor mode)
+-b : target BSSID
+-c : channel
+-a : auto-detect WPS
+-vv: verbose mode
+
+Optional parameters:
+-K <timeout> : set time between attempts
+-p <pin> : try a specific WPS PIN
+-f : ignore lock-outs (use carefully)
+
+----
+
+5. Requirements & Warnings
+Wireless adapter with monitor mode & packet injection
+Router must have WPS enabled
+Ethical use only (with permission
