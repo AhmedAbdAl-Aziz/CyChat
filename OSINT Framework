@@ -1,0 +1,67 @@
+# OSINT Framework
+
+1. Overview
+OSINT Framework is a curated collection of open-source intelligence tools and resources, organized in a tree structure. It helps analysts find the right tool for tasks such as reconnaissance, profiling, and investigation.
+
+Use Cases:
+- Gathering information about domains, emails, usernames, IPs
+- Social media investigation
+- Public data discovery
+- Threat intelligence research
+
+---
+
+2. Key Features
+- Hundreds of categorized OSINT tools
+- Easy navigation via tree structure
+- Covers domains, persons, social networks, metadata, dark web, and more
+- Beginner-friendly and widely used by pentesters
+
+---
+
+3. Installation
+No installation required.
+
+Access via:
+https://osintframework.com/
+
+
+---
+
+## 4. Usage
+- Visit the website
+- Choose your category (e.g., Domain Name, Username, Email Address)
+- Select a tool or data source
+- Follow the link to start your investigation
+
+---
+
+## 5. Recommended Categories
+- Domain Analysis
+- Email Investigation
+- Social Media
+- IP & Network
+- Search Engines
+- Public Records
+- Dark Web
+
+---
+
+6. Advanced Use Cases
+- Combining OSINT tools with automation
+- Early-stage reconnaissance in bug bounty
+- Finding breached data related to a target
+- Mapping digital footprint of organizations
+
+---
+
+7. Mistakes to Avoid
+- Using too many tools without a clear objective
+- Trusting results without verification
+- Forgetting to check rate limits on APIs
+
+---
+
+8. References
+- Official Site: https://osintframework.com/
+
