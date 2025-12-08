@@ -1,0 +1,48 @@
+Dirb
+
+1. Overview
+What Dirb is
+Purpose: directory & file brute forcing
+How it helps recon
+
+---
+
+2. Installation
+Linux (sudo apt install dirb)
+
+macOS (brew install)
+
+Compiling from source
+
+---
+
+3. Wordlists
+Default wordlists
+SecLists
+Custom wordlists examples
+
+---
+
+4. Important Parameters
+dirb URL
+-w → custom wordlist
+-X → extensions
+-r → do NOT recurse
+-S → silent mode
+-o → save output
+
+----
+
+5. Usage Examples
+dirb https://site.com /usr/share/seclists/Discovery/Web-Content/common.txt
+dirb https://site.com -X .php,.html
+
+---
+
+6. Real Attack Examples
+
+Finding /admin/
+Finding hidden login pages
+Discovering backup files .bak, .zip
+
+When to use recursion vs no recursion
