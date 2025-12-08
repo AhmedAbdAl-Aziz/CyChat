@@ -1,1 +1,101 @@
 
+# Nmap (Network Mapper)
+
+## 1. Overview
+Nmap is a powerful open-source network scanning and enumeration tool used to identify hosts, open ports, running services, operating systems, and potential vulnerabilities.
+
+Useful in:
+- Bug Bounty reconnaissance  
+- Pentesting (network mapping)  
+- Asset discovery in large environments  
+
+## 2. Key Features
+- Host discovery  
+- Port scanning (TCP/UDP)  
+- Service version detection  
+- OS fingerprinting  
+- Script automation via NSE (Nmap Scripting Engine)  
+- Firewall & IDS evasion techniques  
+
+---
+
+## 3. Installation
+
+### Linux (Debian/Ubuntu)
+```bash
+sudo apt install nmap
+
+### Arch Linux
+sudo pacman -S nmap
+
+### macOS
+brew install nmap
+
+### Windows
+https://nmap.org/download.html
+
+---
+Common Commands ! 
+
+nmap <target>
+nmap -sV <target>
+nmap -A <target>
+nmap -p 1-65535 <target>
+nmap -Pn <target>
+nmap -sC -sV <target>
+
+----
+5. Important Parameters
+
+Flag	        Description
+
+-sS	          SYN stealth scan
+-sV	          Detect service version
+-O	          OS detection
+-A	          Aggressive scan (OS + version + scripts)
+-Pn	          Skip host discovery
+-p-	          Scan all ports
+
+--script vuln	Run vulnerability scripts
+--top-ports 100	Fast top-ports scan
+--reason	Show why a port is detected as open/closed
+--open	Show only open ports
+
+
+
+6. Advanced Use Cases
+
+Firewall Evasion
+nmap -f -sS <target>
+
+Using NSE Scripts
+nmap --script http-title <target>
+
+Mass Scan + Output
+nmap -sC -sV -oN result.txt <target>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
