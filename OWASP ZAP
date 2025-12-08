@@ -1,0 +1,56 @@
+OWASP ZAP 
+
+1. Overview
+What ZAP is
+It’s free + open source
+Automated + manual security testing
+
+---
+
+2. Installation
+Windows
+
+Linux (apt install zap)
+
+macOS
+Docker (docker run owasp/zap2docker-stable)
+
+---
+
+3. Key Features
+Automated scanner
+Spider
+Fuzzer
+API scanning
+HUD feature for browser
+
+---
+
+4. Important Commands / Parameters
+
+CLI automation:
+zap.sh -cmd -quickurl https://target.com -quickout report.html
+API mode
+Running scripts (Python, JS)
+
+---
+
+5. Attack Examples
+
+XSS discovery via active scan
+Broken auth detection
+Directory brute-force
+Parameter tampering
+
+---
+
+6. Common Mistakes
+
+Forgetting passive scan results
+Misusing active scan on production
+Not configuring context properly
+
+
+7. Notes
+Good alternative to Burp
+Strong automation support
