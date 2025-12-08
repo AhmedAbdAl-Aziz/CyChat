@@ -1,0 +1,69 @@
+Aircrack-ng
+
+1. Overview
+Aircrack-ng is a complete suite of tools to assess WiFi network security, primarily focusing on cracking WEP/WPA-PSK keys by capturing packets and performing key-recovery attacks.
+
+Use cases:
+- Testing WEP/WPA-PSK wireless networks (with permission)  
+- Auditing WiFi security in pentesting engagements  
+- Learning wireless security and cracking techniques  
+
+---
+
+2. Key Features
+- Packet capture and analysis  
+- WPA/WPA2-PSK handshake capture & cracking  
+- WEP cracking  
+- Replay attacks, deauthentication floods  
+- Monitoring mode and packet injection  
+- Support for multiple wireless cards / adapters  
+
+---
+
+3. Installation
+
+Kali / Debian / Ubuntu
+sudo apt update
+sudo apt install aircrack-ng
+
+
+Arch Linux
+sudo pacman -S aircrack-ng
+macOS (via Homebrew; may need external wireless adapter)
+
+brew install aircrack-ng
+Windows (via Cygwin / WSL) – limited support
+Better on Linux.
+
+---
+
+4. Common Commands & Usage Examples
+Put interface into monitor mode:
+
+airmon-ng start wlan0
+Capture packets:
+
+airodump-ng wlan0mon
+Write handshake & IV capture:
+
+airodump-ng --bssid <BSSID> -c <channel> -w capture wlan0mon
+Crack WPA/WPA2-PSK using wordlist:
+
+aircrack-ng -w wordlist.txt -b <BSSID> capture-01.cap
+Crack WEP:
+aircrack-ng capture-01.cap
+
+---
+
+5. Important Parameters / Options
+Option / Flag	Description
+-w <wordlist>	Use wordlist for password cracking
+-b <BSSID>	Target network BSSID
+-c <channel>	Specific channel
+-e <ESSID>	Network name (optional)
+--bssid	Filter by BSSID when capturing
+--ivs	Save only IVs (useful for WEP)
+--beacon	Listen for beacon frames
+--auth-retry	Retry authentication (if needed)
+
+
