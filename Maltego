@@ -1,7 +1,7 @@
 
 # Maltego
 
-## 1. Overview
+1. Overview
 Maltego is a powerful visual link analysis tool used for OSINT investigations, relationship mapping, and entity correlation.
 
 Used by:
@@ -9,7 +9,7 @@ Used by:
 - Pentesters & Red Teams  
 - Digital forensics investigators  
 
-## 2. Key Features
+2. Key Features
 - Graph-based visualization  
 - Thousands of transforms  
 - Entity correlation (domains, emails, phones)  
@@ -18,7 +18,7 @@ Used by:
 
 ---
 
-## 3. Installation
+3. Installation
 
 ### Linux (recommended)
 sudo apt install maltego
@@ -33,27 +33,33 @@ https://maltego.com/downloads/
 
 ---
 
-## Common Operations
+4. Common Operations
 DNS to Domain mapping
 Email to Social Media profile
 IP → Domain → Subdomain correlation
 Person relationship mapping
 
-## Important Features to Document
+---
+
+5. Important Features to Document
 Feature	    Description
 Transforms	Automated OSINT queries
 Entities	  Nodes on the graph (emails, domains, etc.)
 Machines	  Automated recon pipelines
 Graph Export	CSV, PNG, PDF
 
-##Advanced Usage
+---
+
+6. Advanced Usage
 Run a Machine
 Used for full recon:
 Footprint L1
 Footprint L2
 Footprint L3
 
-Integration with APIs
+---
+
+7. Integration with APIs
 Shodan
 HaveIBeenPwned
 VirusTotal
