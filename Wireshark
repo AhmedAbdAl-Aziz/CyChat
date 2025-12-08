@@ -1,0 +1,60 @@
+Wireshark
+
+1. Overview
+Wireshark is the leading open-source network protocol analyzer. It captures and analyzes packets across networks, enabling deep inspection of hundreds of protocols.
+
+Use cases:
+- Network troubleshooting & diagnostics  
+- Packet analysis during pentesting  
+- Monitoring traffic, detecting suspicious behavior  
+- Learning network protocols & security analysis  
+
+---
+
+2. Key Features
+- Live packet capture  
+- Deep protocol dissectors (HTTP, TLS, DNS, etc.)  
+- Filtering & display filters  
+- Exporting captures (PCAP)  
+- Packet inspection, reassembly, analysis  
+- Integration with CLI tools (tshark)  
+- Statistics, flow graphs, IO graphs  
+
+---
+
+3. Installation
+
+Debian/Ubuntu/Kali
+sudo apt update
+sudo apt install wireshark
+
+Windows / macOS
+
+Installers available at https://www.wireshark.org
+
+---
+
+4. Basic Usage
+Start capture on interface (Ethernet or WiFi)
+
+Use display filters, e.g.:
+http → show HTTP traffic
+tls or ssl → TLS traffic
+ip.addr == 192.168.1.5 → filter by IP
+Stop capture and save to .pcap for later analysis
+
+---
+
+5. Important Tips & Parameters
+Use capture filters vs display filters
+Enable/disable promiscuous mode
+Use “Follow TCP Stream” for session reconstruction
+Export packets or streams for further tools
+
+---
+
+6. Advanced Usage / Use Cases
+Analyze intercepted traffic from a test network
+Check for sensitive data in plaintext (passwords, tokens)
+Detect unusual traffic or anomalies (suspicious DNS, unknown protocols)
+Use packet export + external tools for deeper analysis
