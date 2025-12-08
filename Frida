@@ -1,0 +1,72 @@
+Frida
+
+1. Overview
+Use Cases:
+- Bypassing Root/Jailbreak detection
+- Runtime function hooking
+- Dumping memory
+- تحليل Android/iOS apps
+- تجاوز SSL Pinning
+
+---
+
+2. Key Features
+- Dynamic code injection
+- JavaScript-based instrumentation
+- Android, iOS, Windows, Linux, macOS support
+- Hooking Java + Native code
+- Powerful RE tools
+
+---
+
+3. Installation
+Linux / macOS
+pip install frida-tools
+
+
+Android Device
+bash
+نسخ الكود
+adb push frida-server /data/local/tmp/
+adb shell "chmod 755 /data/local/tmp/frida-server"
+adb shell "/data/local/tmp/frida-server &"
+
+Windows
+
+pip install frida-tools
+
+---
+
+4. Usage Examples
+List running processes:
+frida-ps -U
+Inject script:
+
+frida -U -f com.example.app -l script.js --no-pause
+Example hook:
+
+Java.perform(function () {
+    var cls = Java.use("com.example.Class");
+    cls.targetMethod.implementation = function () {
+        console.log("Hooked!");
+        return this.targetMethod();
+    };
+});
+
+---
+
+5. Important Commands
+Command	Description
+frida-ps	List processes
+frida-trace	Auto-generate hooks
+frida-server	Required for device instrumentation
+-U	Attach to USB device
+
+----
+
+6. Advanced Use Cases
+Bypassing SSL Pinning
+Hooking native libraries (libc, libssl)
+Reverse engineering protected Android apps
+Extracting runtime secrets
+
